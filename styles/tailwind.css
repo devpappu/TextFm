@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+
+
+
+  .signup-page-field{
+    @apply   border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+  }
+
+  .bg-primary{
+    @apply bg-[#000000] text-white
+  }
+
+  .bg-section{
+    @apply bg-[#323232]
+  }
+  .bg-top-bar{
+    @apply bg-[#286ef1]
+  }
+  .text-orange{
+    @apply text-[#286ef1]
+  }
+
+  .bg-blue{
+    @apply bg-[#286ef1] text-white
+  }
+  .btn-bg-blue{
+    @apply bg-[#286ef1] text-white hover:bg-[#2368e7]
+  }
+
+  .blue-border{
+    @apply border-[#286ef1]
+  }
+
+  .bg-orange-hover{
+    @apply bg-[#f08132]
+  }
+  .bg-orange-dark{
+    @apply bg-[#ad5b1d]
+  }
+  .text-primary-hover{
+    @apply hover:text-[#286ef1]
+  }
+
+  .card-bg{
+    @apply bg-[#fff] text-black border border-gray-200
+  }
+
+  .section-my{
+    @apply my-16
+  }
+
+  .section-py{
+    @apply py-16
+  }
+  
+  .bg-secondary{
+    @apply bg-[#302f2f] text-white
+  }
+
+
+}

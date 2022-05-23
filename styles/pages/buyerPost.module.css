@@ -1,0 +1,123 @@
+.buyer_post_container {
+    width: 1270px;
+    margin: auto;
+}
+
+.form_container {
+    display: flex;
+}
+
+.textarea {
+    height: 100px;
+    background-color: transparent;
+    outline: none;
+}
+
+.submit_btns {
+    background-color: #F1F2F4;
+    padding: 8px 40px;
+    border-radius: 20px;
+    border: 1px solid #c8c9cc;
+    cursor: pointer;
+}
+
+.top_btns {
+    background-color: #F1F2F4;
+    padding: 8px 40px;
+    cursor: pointer;
+}
+
+.top_first_btn {
+    position: relative;
+}
+
+.top_first_btn::before {
+    border-color: #F1F2F4 transparent transparent;
+    border-style: solid;
+    border-width: 25px 18px 0;
+    bottom: -25px;
+    content: "";
+    height: 0;
+    left: 43px;
+    margin-top: 0;
+    position: absolute;
+    width: 0;
+}
+
+.buyer_post_form {
+    width: 70%;
+    margin: auto;
+}
+
+.form_fields_container {
+    padding: 0 30px;
+}
+
+.input_field {
+    border: 2px solid #a8a5a5;
+    border-radius: 3px;
+    padding: 8px 20px;
+    outline: none;
+    width: 100%;
+}
+
+.input_field_label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.category_search {
+    background-color: #F1F2F4;
+    padding: 10px 5px;
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    left: 0;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.field_and_options {
+    position: relative;
+}
+
+.field_and_options:hover .category_search {
+    visibility: visible;
+}
+
+.option_list_item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.option_list_item:hover {
+    background-color: #fff;
+}
+
+.qty_field {
+    width: 33% !important;
+}
+
+.questions_wrapper {
+    margin-left: -30px;
+}
+
+.preview_container {
+    padding: 40px 40px;
+    width:70%;
+    border: 1px solid #585858;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.preview{
+    padding: 40px 0px;
+}
+
+@media only screen and (max-width: 640px) {
+    .mobile_container {
+        width: 85% !important;
+    }
+}

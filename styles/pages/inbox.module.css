@@ -1,0 +1,53 @@
+.contacts{
+width: 25%;
+padding-left: 10px;
+}
+.inbox_hero_section{
+    min-height: 90vh;
+}
+.messages{
+    width: 50%;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.inbox_message{
+    height: 70vh;
+    overflow-y: scroll;
+}
+.contact_info{
+    width: 25%;
+    padding-right: 10px;
+}
+.inbox_container{
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+.contact_image{
+    border-radius: 50%;
+}
+.contacts_top_bar, .contact_item, .contact_info_topbar{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.inbox_date{
+    position: relative;
+}
+.inbox_date::before{
+    content: '';
+    width: 39%;
+    border-bottom:1px solid #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+.inbox_date::after{
+    content: '';
+    width: 39%;
+    border-bottom:1px solid #e0e0e0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+}

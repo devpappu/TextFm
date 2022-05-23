@@ -1,0 +1,197 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.primary__bg__color {
+  /* background: #37AC0C; */
+}
+
+/* custom  css class */
+.flex_content_center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gradient__bg{
+  background-color: #0093E9;
+   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
+
+.section__padding {
+  padding: 0px 10em;
+}
+
+.blog__single__section__padding {
+  padding: 0px 10em;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+
+  .section__padding {
+    padding: 0px 2em;
+  }
+
+  .blog__single__section__padding {
+    padding: 0px 1em;
+  }
+
+}
+
+.dark{
+  background: #1f2937;
+  color: white;
+}
+
+
+.box__shadow{
+  box-shadow: rgb(0 0 0 / 15%) 0px 6px 30px 0px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+  /* user manu */
+  .user__menu {
+    position: relative;
+  }
+
+  .user__menu__content {
+    display: none;
+    z-index: 6;
+  }
+
+  .user__menu__content {
+    color: #131F35;
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    width: 180px;
+    padding: 20px;
+    background: white;
+  }
+
+  .user__menu:hover+.user__menu__content {
+    display: block !important;
+  }
+
+  /* phone header */
+  .phone__header {
+    background: #131F35;
+  }
+}
+
+
+
+
+
+/* footer css */
+.social__icon {
+  border: solid 1px #287c0a;
+  ;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 100px;
+}
+
+.social__icon:hover {
+  background: #545c52;
+  ;
+}
+
+.card__border {
+  border: solid 1px rgba(143, 134, 134, 0.212);
+}
+
+.up-icon {
+  width: 15px;
+  color: white !important;
+}
+
+
+.box__shadow{
+  box-shadow: 0 1px 21px 0 rgb(135 140 157 / 20%);
+}
+
+.load__bg{
+  background-image: url(https://vistaprox.com/wp-content/uploads/2022/01/shape_5.png);
+  background-position: -83px 132px;
+  background-repeat: no-repeat;
+}
+
+.form__center {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+.popup__background {
+  background: #00000069;
+  padding: wid;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100 !important;
+}
+
+
+/*header menu responsive */
+
+@media only screen and (max-width: 1301px) and (min-width: 0px){
+
+  .dashboard__menu__item{
+   display: none;
+  }
+
+  .dashboard__menu__icon{
+    display: block !important;
+  }
+  
+  }
+
+
+  @media only screen and (max-width: 1259px) and (min-width: 979px){
+    .main__header{
+       
+      padding: 20px 70px !important;
+    }
+    
+  }
+
+  @media only screen and (max-width: 980px) and (min-width: 789px){
+
+    .main__header{
+       
+      padding: 20px 30px !important;
+    }
+    
+  }
+
+.hero_section{
+  /* background: -webkit-gradient(linear,left top,right top,from(rgba(255,161,161,.1)),to(rgba(24,31,216,.1))); */
+}

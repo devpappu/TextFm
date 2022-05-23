@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/layouts/footer/footer';
 import Header from '../../components/layouts/header/header';
+import postTitleTrim from '../../utility/postTitleTrim';
 // import Image from 'next/image';
 export default function Index() {
  
@@ -35,16 +36,15 @@ export default function Index() {
           {/* post section */}
           <Header/>
 
-          <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-16 px-4">
-                  <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
+          <div className="pt-4 pb-16 bg-gray-50  lg:px-40 md:px-16 px-6">
+                  <div className="blogs py-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                           {
                               Post.map((item, index) =>{
                                   return(
-                                  <div key={index} className="bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
-                                      <div className='mt-2 lg:flex md:flex justify-center align-item-center  gap-5'>
+                                  <div key={index} className="mt-6 bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border-t-4 border-b-4 blue-border">
+                                      <div className='mt-2 '>
 
                                           <div className='flex justify-between '>
-                                           
                                             <div>
                                               <Link
                                                     href={{
@@ -52,34 +52,38 @@ export default function Index() {
                                                     query: { slug: item.slug },
                                                 }}
                                                 >
-                                                <a> <Image width="500px" height="300px" src="/images/gig4.jpg" className='rounded-2xl'  alt={item.post_title}  />
+                                                  
+                                                <a> <Image width="500px" height="300px" src="/images/gig4.jpg" className='rounded'  alt={item.post_title}  />
                                                 </a>
+
                                               </Link>
                                               </div>
                                           </div>
 
                                             <div>
+                                              <div className='mt-3'>
 
-                                             <div className='mt-3'>
-                                                <Link
-                                                      href={{
-                                                      pathname: '/blog/[slug]',
-                                                      query: { slug: item.slug },
-                                                  }}
-                                                  >
-                                                  <a className="mt-3 lg:text-2xl md:text-2xl font-medium ">{item.post_title}</a>
-                                                </Link>
+                                               {/* <p className='md:mt-0 lg:mt-0 mt-2' >Publish Date : 11.04.2022</p> */}
+                                             
+                                              <Link
+                                                    href={{
+                                                    pathname: '/blog/[slug]',
+                                                    query: { slug: item.slug },
+                                                }}
+                                                >
+                                                <a className="lg:text-lg md:text-lg font-medium ">{postTitleTrim(item.post_title)}</a>
+
+                                              </Link>
+
+                                              </div>
+
+                                              <div className='mt-2'>
+                                                <audio src="" controls/>
                                               </div>
 
                                               <div>
-                                                <p className='mt-5' >{item.des}</p>
-
-                                                <div className='mt-3 flex'>
-
-                                                  <button className='px-16 py-3 border-2 shadow-2xl rounded-full '>Source</button>
-
-                                                </div>
-
+                                                <p className='mt-4' >{item.des}</p>
+                                                  <button className='mt-3 w-full bg-blue py-3 shadow-lg border block rounded'>POST SOURCE</button>
                                               </div>
 
                                             </div>

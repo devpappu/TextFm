@@ -29,7 +29,18 @@ const Homepage = () => {
           
           <div className="hero__text__image">
             <div>
-              <h1 className="mt-3">
+
+            <div className="flex flex-wrap lg:gap-6 md:gap-6 gap-5">
+                <button className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue ">
+                  Find Talent
+                </button>
+                <button className="bg-blue rounded py-3 lg:w-52 md:w-52 w-full">
+                  Find Work
+                </button>
+              </div>
+
+
+              <h1 className="mt-16">
                 <span className="lg:text-5xl md:text-5xl text-4xl text-orange">
                 Stay informed in 60 words.
                 </span>
@@ -42,14 +53,7 @@ const Homepage = () => {
                 </p>
               </div>
 
-              <div className="mt-4 flex flex-wrap lg:gap-6 md:gap-6 gap-5">
-                <button className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue ">
-                  Find Talent
-                </button>
-                <button className="bg-blue rounded py-3 lg:w-52 md:w-52 w-full">
-                  Find Work
-                </button>
-              </div>
+             
 
             </div>
           </div>

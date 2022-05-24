@@ -139,7 +139,7 @@ const Header = () => {
                   >
                     Dashboard
                   </Link> :  <div className="flex gap-8">
-                  <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div>
+                  {/* <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div> */}
                   <div onClick={changeMode} className=" cursor-pointer text-3xl "><MdOutlineDarkMode/></div>
                   </div>
                   }
@@ -165,7 +165,7 @@ const Header = () => {
           </div>
 
             <div className="flex items-center gap-8 text-white">
-                  <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div>
+                  {/* <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div> */}
                   <div onClick={changeMode} className=" cursor-pointer text-3xl "><MdOutlineDarkMode/></div>
                  <i onClick={toglePhoneMenu} className=" cursor-pointer text-4xl las la-bars"></i>
             </div>

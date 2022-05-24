@@ -32,10 +32,10 @@ const Homepage = () => {
 
             <div className="flex flex-wrap lg:gap-6 md:gap-6 gap-5">
                 <button className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue ">
-                  Find Talent
+                  BLOGS
                 </button>
                 <button className="bg-blue rounded py-3 lg:w-52 md:w-52 w-full">
-                  Find Work
+                  NEWS
                 </button>
               </div>
 

@@ -35,31 +35,27 @@ export default function Index() {
           {/* post section */}
           <Header/>
 
-          <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-16 px-4">
+          <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-4">
                   <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
                           {
                               Post.map((item, index) =>{
                                   return(
                                   <div key={index} className="bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
-                                      <div className='mt-2 lg:flex md:flex justify-center align-item-center  gap-5'>
+                                      <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
 
-                                          <div className='flex justify-between '>
-                                           
-                                            <div>
+                                            <div className='lg:w-4/12 md:w-5/12'>
                                               <Link
                                                     href={{
                                                     pathname: '/blog/[slug]',
                                                     query: { slug: item.slug },
                                                 }}
                                                 >
-                                                <a> <Image width="500px" height="300px" src="/images/gig4.jpg" className='rounded-2xl'  alt={item.post_title}  />
+                                                <a> <Image width="500px" height="320px" src="/images/gig4.jpg" className='rounded-2xl'  alt={item.post_title}  />
                                                 </a>
                                               </Link>
-                                              </div>
-                                          </div>
+                                            </div>
 
-                                            <div>
-
+                                            <div className='lg:w-8/12 md:w-7/12'>
                                              <div className='mt-3'>
                                                 <Link
                                                       href={{

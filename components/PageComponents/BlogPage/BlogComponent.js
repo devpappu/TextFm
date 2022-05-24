@@ -7,7 +7,7 @@ const BlogComponent = ({blogs}) => {
           {
             blogs.map((item, index) =>{
                 return(
-                <div key={index} className="bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
+                <div key={index} className="mb-6 bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
                     <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
 
                           <div className='lg:w-4/12 md:w-5/12 w-full'>

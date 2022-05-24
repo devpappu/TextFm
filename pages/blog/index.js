@@ -11,6 +11,10 @@ export default function Index() {
     const [Post, setPost] = useState([]);
     const [loading, setLoading] = useState(true);
 
+
+    const searchBlog = () =>{
+      alert('Pending')
+    }
    //  post data call
    useEffect(()=>{
     axios.get('./json/blog.json')
@@ -49,7 +53,7 @@ export default function Index() {
 
                 {/* search box  */}
                 <div className='mt-3 mb-3 flex items-center gap-3 rounded-md bg-white px-4 py-1.5 shadow-lg'>
-                   <div className='text-white text-2xl bg-blue rounded-sm py-1 px-2 text-center cursor-pointer '>
+                   <div onClick={searchBlog} className='text-white text-2xl bg-blue mt-0.5 rounded py-2 px-2 text-center cursor-pointer '>
                      <FaSistrix/>
                    </div>
 

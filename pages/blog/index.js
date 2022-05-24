@@ -1,13 +1,11 @@
 import axios from 'axios';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/layouts/footer/footer';
 import Header from '../../components/layouts/header/header';
-import style from './blog.module.css'
 import { Rings } from "react-loader-spinner";
 import BlogComponent from '../../components/PageComponents/BlogPage/BlogComponent';
+import { FaSistrix } from "react-icons/fa";
 export default function Index() {
  
     const [Post, setPost] = useState([]);
@@ -38,6 +36,7 @@ export default function Index() {
      
           {/* post section */}
           <Header/>
+          
           {loading ? (
             
             <div className="mt-5 flex justify-center">
@@ -47,6 +46,17 @@ export default function Index() {
             ):(
               
             <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-4">
+
+                {/* search box  */}
+                <div className='mt-3 mb-3 flex items-center gap-3 rounded-md bg-white px-4 py-1.5 shadow-lg'>
+                   <div className='text-white text-2xl bg-blue rounded-sm py-1 px-2 text-center cursor-pointer '>
+                     <FaSistrix/>
+                   </div>
+
+                  <input type="text" className="text-lg border-0 border-gray-400 text-gray-900 focus:ring-whitefocus:border-white  block w-full px-2.5 py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Search ..."/>
+
+                </div>
+
                 <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
                     <BlogComponent blogs={Post}/>
                 </div>

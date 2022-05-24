@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import localUrl from "../../../utility/localUrl";
 import style from "./header.module.css";
 const axios = require("axios");
-import { FaSistrix } from "react-icons/fa";
 import { MdOutlineDarkMode } from "react-icons/md";
 import SearchBox from './HeaderComponents/SearchBox.js';
 import { useDispatch, useSelector } from "react-redux";

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/layouts/footer/footer';
 import Header from '../../components/layouts/header/header';
+import style from './blog.module.css'
 // import Image from 'next/image';
 export default function Index() {
  
@@ -43,39 +44,23 @@ export default function Index() {
                                   <div key={index} className="bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
                                       <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
 
-                                            <div className='lg:w-4/12 md:w-5/12'>
-                                              <Link
-                                                    href={{
-                                                    pathname: '/blog/[slug]',
-                                                    query: { slug: item.slug },
-                                                }}
-                                                >
-                                                <a> <Image width="500px" height="320px" src="/images/gig4.jpg" className='rounded-2xl'  alt={item.post_title}  />
-                                                </a>
-                                              </Link>
+                                            <div className='lg:w-4/12 md:w-5/12 w-full'>
+                                                <Image  width="500px" height="350px" src="/images/gig4.jpg" 
+                                                    className={`${style.blog__image} blog__image rounded-2xl`}  alt={item.post_title}  />
                                             </div>
 
                                             <div className='lg:w-8/12 md:w-7/12'>
-                                             <div className='mt-3'>
-                                                <Link
-                                                      href={{
-                                                      pathname: '/blog/[slug]',
-                                                      query: { slug: item.slug },
-                                                  }}
-                                                  >
-                                                  <a className="mt-3 lg:text-2xl md:text-2xl font-medium ">{item.post_title}</a>
-                                                </Link>
+                                            
+                                             <div>
+                                                <p className="mt-3 lg:text-2xl md:text-2xl font-medium ">{item.post_title}</p>
+                                                <p className='mt-2 text-gray-700 text-sm'>By Textfm 25 Sep 2022</p>
                                               </div>
 
                                               <div>
-                                                <p className='mt-5' >{item.des}</p>
-
+                                                <p className='mt-2' >{item.des}</p>
                                                 <div className='mt-3 flex'>
-
-                                                  <button className='px-16 py-3 border-2 shadow-2xl rounded-full '>Source</button>
-
+                                                  <button className='px-16 py-3 border-2 shadow-2xl rounded-full '>SOURCE</button>
                                                 </div>
-
                                               </div>
 
                                             </div>

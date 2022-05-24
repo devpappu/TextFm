@@ -7,6 +7,6 @@
   /* font-family: 'Roboto', sans-serif; */
 }
 
-.post__image{
-  z-index: -10;
+.blog__image{
+  width: 100% !important;
 }

@@ -1,22 +1,27 @@
 import axios from 'axios';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/layouts/footer/footer';
 import Header from '../../components/layouts/header/header';
-import style from './blog.module.css'
-// import Image from 'next/image';
+import { Rings } from "react-loader-spinner";
+import NewsComponent from '../../components/PageComponents/NewsPage/NewsComponent';
+import { FaSistrix } from "react-icons/fa";
 export default function Index() {
  
     const [Post, setPost] = useState([]);
+    const [loading, setLoading] = useState(true);
 
+
+    const searchBlog = () =>{
+      alert('Pending')
+    }
    //  post data call
    useEffect(()=>{
-    axios.get('./json/blog.json')
+    axios.get('./json/news.json')
     .then(response => {
-        const post = response.data ; 
+        const post = response.data; 
         setPost(post);
+        setLoading(false)
 
     })
     .catch(err => console.error(err))
@@ -35,43 +40,34 @@ export default function Index() {
      
           {/* post section */}
           <Header/>
-
-          <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-4">
-                  <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
-                          {
-                              Post.map((item, index) =>{
-                                  return(
-                                  <div key={index} className="bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
-                                      <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
-
-                                            <div className='lg:w-4/12 md:w-5/12 w-full'>
-                                                <Image  width="500px" height="350px" src="/images/gig4.jpg" 
-                                                    className={`${style.blog__image} blog__image rounded-2xl`}  alt={item.post_title}  />
-                                            </div>
-
-                                            <div className='lg:w-8/12 md:w-7/12'>
-                                            
-                                             <div>
-                                                <p className="mt-3 lg:text-2xl md:text-2xl font-medium ">{item.post_title}</p>
-                                                <p className='mt-2 text-gray-700 text-sm'>By Textfm 25 Sep 2022</p>
-                                              </div>
-
-                                              <div>
-                                                <p className='mt-2' >{item.des}</p>
-                                                <div className='mt-3 flex'>
-                                                  <button className='px-16 py-3 border-2 shadow-2xl rounded-full '>SOURCE</button>
-                                                </div>
-                                              </div>
-
-                                            </div>
-                                      </div>
-                                  </div>
-                                  )
-                              })
-                          }
-                  
-                  </div>
+          
+          {loading ? (
+            
+            <div className="mt-5 flex justify-center">
+                    <Rings height="100" width="100" color="grey" ariaLabel="loading" />
               </div>
+
+            ):(
+              
+            <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-4">
+
+                {/* search box  */}
+                <div className='mt-3 mb-3 flex items-center gap-3 rounded-md bg-white px-4 py-1.5 shadow-lg'>
+                   <div onClick={searchBlog} className='text-white text-2xl bg-blue mt-0.5 rounded py-2 px-2 text-center cursor-pointer '>
+                     <FaSistrix/>
+                   </div>
+
+                  <input type="text" className="text-lg border-0 border-gray-400 text-gray-900 focus:ring-whitefocus:border-white  block w-full px-2.5 py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Search ..."/>
+
+                </div>
+
+                <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
+                    <NewsComponent news={Post}/>
+                </div>
+            </div>
+
+          )}
+
     </div>
    
    <Footer/>

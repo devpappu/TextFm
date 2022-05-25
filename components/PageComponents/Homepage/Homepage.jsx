@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 const axios = require("axios");
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -31,12 +32,19 @@ const Homepage = () => {
             <div>
 
             <div className="flex flex-wrap lg:gap-6 md:gap-6 gap-5">
-                <button className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue ">
-                  BLOGS
-                </button>
-                <button className="bg-blue rounded py-3 lg:w-52 md:w-52 w-full">
-                  NEWS
-                </button>
+              
+               <Link href="/blog">
+                  <a className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue text-center ">
+                    BLOGS
+                  </a>
+               </Link>
+
+               <Link href="/news">
+                  <a className="rounded py-3 lg:w-52 md:w-52 w-full bg-blue text-center ">
+                    NEWS
+                  </a>
+               </Link>
+
               </div>
 
 

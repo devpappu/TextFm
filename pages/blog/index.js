@@ -5,7 +5,6 @@ import Footer from '../../components/layouts/footer/footer';
 import Header from '../../components/layouts/header/header';
 import { Rings } from "react-loader-spinner";
 import BlogComponent from '../../components/PageComponents/BlogPage/BlogComponent';
-import { FaSistrix } from "react-icons/fa";
 export default function Index() {
  
     const [Post, setPost] = useState([]);
@@ -38,30 +37,18 @@ export default function Index() {
       </Head>
       <div>
      
-          {/* post section */}
           <Header/>
-          
           {loading ? (
             
             <div className="mt-5 flex justify-center">
                     <Rings height="100" width="100" color="grey" ariaLabel="loading" />
               </div>
-
             ):(
               
-            <div className="pt-4 pb-16 lg:px-40 md:px-5 px-4">
+            <div className="pt-4 pb-16 lg:px-48 md:px-12 px-6">
 
-                <h1 className='text-3xl my-10'>Archives</h1>
-                {/* search box  */}
-                {/* <div className='mt-3 mb-3 flex items-center gap-3 rounded-md bg-white px-4 py-1.5 shadow-lg'>
-                   <div onClick={searchBlog} className='text-white text-2xl bg-blue mt-0.5 rounded py-2 px-2 text-center cursor-pointer '>
-                     <FaSistrix/>
-                   </div>
-
-                  <input type="text" className="text-lg border-0 border-gray-400 text-gray-900 focus:ring-whitefocus:border-white  block w-full px-2.5 py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Search ..."/>
-
-                </div> */}
-
+                <h1 className='text-5xl font-bold my-10'>Archives</h1>
+   
                 <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
                     <BlogComponent blogs={Post}/>
                 </div>

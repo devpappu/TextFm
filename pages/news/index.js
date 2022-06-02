@@ -49,7 +49,7 @@ export default function Index() {
 
             ):(
               
-            <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-2">
+            <div className="pt-4 pb-16 bg-gray-100  lg:px-40 md:px-5 px-3">
 
                 {/* search box  */}
                 <div className='mt-3 mb-3 flex items-center gap-3 rounded-md bg-white px-4 py-1.5 shadow-lg'>

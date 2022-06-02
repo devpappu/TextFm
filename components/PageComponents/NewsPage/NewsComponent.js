@@ -12,7 +12,7 @@ const NewsComponent = ({news}) => {
 
                           <div className='lg:w-4/12 md:w-5/12 w-full'>
                               <Image  width="500px" height="250px" src="/images/gig4.jpg" 
-                                  className={`${style.blog__image} blog__image rounded-2xl`}  alt={item.post_title}  />
+                                  className={`${style.blog__image} blog__image rounded-lg`}  alt={item.post_title}  />
                           </div>
 
                           <div className='lg:w-8/12 md:w-7/12'>
@@ -25,7 +25,8 @@ const NewsComponent = ({news}) => {
                             <div>
                               <p className='mt-2' >{item.des}</p>
 
-                                <button className='mt-3 text-left px-16 py-3'>Read More At Time Now</button>
+                                <button className='mt-3 text-left text-black py-3'>Read More At Time Now</button>
+                                
                             </div>
 
                           </div>

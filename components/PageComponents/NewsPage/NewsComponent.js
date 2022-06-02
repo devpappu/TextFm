@@ -19,14 +19,15 @@ const NewsComponent = ({news}) => {
                           
                            <div>
                               <p className="mt-3 lg:text-2xl md:text-2xl font-medium ">{item.post_title}</p>
-                              <p className='mt-2 text-gray-700 text-sm'>By Textfm 25 Sep 2022</p>
                             </div>
 
                             <div>
                               <p className='mt-2' >{item.des}</p>
 
+                              <p className='mt-3 text-gray-700 text-sm'>By Textfm 25 Sep 2022</p>
+
                                 <button className='mt-3 text-left text-black py-3'>Read More At Time Now</button>
-                                
+
                             </div>
 
                           </div>

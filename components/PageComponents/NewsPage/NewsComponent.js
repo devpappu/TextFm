@@ -7,11 +7,11 @@ const NewsComponent = ({news}) => {
           {
             news.map((item, index) =>{
                 return(
-                <div key={index} className="mb-6 bg-white rounded-lg shadow-lg lg:px-5 md:px-5 px-2 py-4 box__shadow border border-gray-200  ">
+                <div key={index} className="mb-6 bg-white rounded-lg shadow-lg px-5 py-4 box__shadow border border-gray-200  ">
                     <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
 
                           <div className='lg:w-4/12 md:w-5/12 w-full'>
-                              <Image  width="500px" height="350px" src="/images/gig4.jpg" 
+                              <Image  width="500px" height="250px" src="/images/gig4.jpg" 
                                   className={`${style.blog__image} blog__image rounded-2xl`}  alt={item.post_title}  />
                           </div>
 
@@ -24,9 +24,8 @@ const NewsComponent = ({news}) => {
 
                             <div>
                               <p className='mt-2' >{item.des}</p>
-                              <div className='mt-3 flex'>
-                                <button className='px-16 py-3 border-2 shadow-2xl rounded-full '>SOURCE</button>
-                              </div>
+
+                                <button className='mt-3 text-left px-16 py-3'>Read More At Time Now</button>
                             </div>
 
                           </div>

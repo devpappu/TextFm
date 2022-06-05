@@ -43,7 +43,7 @@ export default function Index() {
           
           {loading ? (
             
-            <div className="mt-5 flex justify-center">
+            <div className="s-mt flex justify-center">
                     <Rings height="100" width="100" color="grey" ariaLabel="loading" />
               </div>
 

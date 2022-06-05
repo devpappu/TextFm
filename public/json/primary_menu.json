@@ -1,6 +1,6 @@
 [
   {
-    "menu_title": "Tranding",
+    "menu_title": "Top stories",
     "menu_link": "/blog",
     "menu_position": 1
   },
@@ -20,7 +20,7 @@
     "menu_position": 4
   },
   {
-    "menu_title": "World",
+    "menu_title": "Your local news",
     "menu_link": "/blog",
     "menu_position": 5
   },

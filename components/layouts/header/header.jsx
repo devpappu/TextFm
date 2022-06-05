@@ -105,7 +105,7 @@ const Header = () => {
 
     </div>
       <div className="fixed top-0 w-full block z-50">
-        <div className="z-50 lg:px-48 bg-white text-black px-6 shadow-md border-b w-full block md:py-5 py-2.5 border-gray-100 bg-top-bar relative ">
+        <div className="border-t-2 lg:px-48 bg-white text-black px-6 shadow-lg w-full block md:py-5 py-2.5 border-gray-300 bg-top-bar relative ">
 
           <div className="lg:block md:block hidden ">
             <div className="flex justify-between items-center gap-5">

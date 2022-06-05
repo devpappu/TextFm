@@ -168,7 +168,7 @@ const Header = () => {
         {phoneMenu && 
             <div className={`t-popup__background phone__header ${phoneMenu ? '': ''}`}>
 
-              <div className={`border-t-2 border-gray-300 bg-white pb-4 shadow-xl fixed top-14 left-0  w-72 `}>
+              <div className={`border-t-2 border-gray-300 bg-white pb-4 lg:shadow shadow-xl fixed top-14 left-0  w-72 `}>
               
                 <div className={`${style.phome__menu__div}`}>
                     <ul className={`${style.menu__item} mt-4   text-black`}>

@@ -39,7 +39,7 @@ const Post = () => {
 
         <div className='my-16 blog__single__section__padding'>
               
-              <p className='text-lg'>Jan 27 2022</p>
+              <p className='pt-10 text-lg'>Jan 27 2022</p>
 
                <p className={`${style.blog__title} mt-12 text-4xl font-bold`}>43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
                <p className={style.blog__description} dangerouslySetInnerHTML={{__html: Post}}/>

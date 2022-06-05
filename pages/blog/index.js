@@ -45,7 +45,7 @@ export default function Index() {
               </div>
             ):(
               
-            <div className="pt-4 pb-16 lg:px-48 md:px-12 px-6">
+            <div className="s-mt  pt-4 pb-16 lg:px-48 md:px-12 px-6">
 
                 <h1 className='text-5xl font-bold my-10'>Archives</h1>
    

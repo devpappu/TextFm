@@ -49,7 +49,7 @@ export default function Index() {
 
             ):(
               
-            <div className="pt-16 pb-16 bg-gray-100  lg:px-40 md:px-5 px-3">
+            <div className="s-mt pt-2 pb-16 bg-gray-100  lg:px-40 md:px-5 px-3">
                 <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
                     <NewsComponent news={Post}/>
                 </div>

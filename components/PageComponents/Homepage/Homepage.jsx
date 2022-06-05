@@ -13,16 +13,16 @@ const Homepage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="">
+      <div className="mt-10 lg:py-24 ">
         {/* hero section */}
 
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 py-8 items-center section__padding">
           
          <div className="mt-4 hero_image">
             <Image
-              width="400px"
+              width="800px"
               height="600px"
-              src="/images/main_india.jpg"
+              src="/images/hero.png"
               className="hero_image"
               alt="img"
             />

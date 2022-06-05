@@ -132,41 +132,12 @@ const Header = () => {
           </div>
 
 
-          {/* phone header */}
-          
-          <div className="lg:hidden md:hidden">
-
-            <div className="flex items-center justify-between gap-20">
-
-            <div className="flex items-center  gap-8 text-black">
-                    {/* <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div> */}
-                    {/* <div onClick={changeMode} className=" cursor-pointer text-3xl "><MdOutlineDarkMode/></div> */}
-                  <i onClick={toglePhoneMenu} className=" cursor-pointer text-3xl las la-bars"></i>
-              </div>
-
-            <div>
-              <span className="text-black font-bold text-2xl">
-                <Link href="/">
-                  {/* <a> <Image src="/images/upwork.png" width="130px" height="30px" className='logo site__logo' alt="website logo" /></a> */}
-                  TextFM
-                </Link>
-              </span>
-            </div>
-
-            <div>
-              <span className="text-black font-bold text-2xl">
-                <FaSistrix/>
-              </span>
-            </div>
-
-            
-            </div>
-          </div>
+         
 
            {/* phone left side menu */}
 
         {phoneMenu && 
-            <div className={`t-popup__background phone__header ${phoneMenu ? '': ''}`}>
+            <div className={`z-50 t-popup__background phone__header ${phoneMenu ? '': ''}`}>
 
               <div className={`border-t-2 border-gray-300 bg-white pb-4 lg:shadow shadow-xl fixed top-14 left-0  w-72 `}>
               
@@ -305,12 +276,29 @@ const Header = () => {
             </div>
         }
 
-        
-
-        </div>
+          </div>
       </div>
 
+         {/* phone header */}
+       <div className="border-t border-gray-400 lg:hidden md:hidden block z-50 bg-white shadow-lg w-full py-3 fixed top-0 px-7">
+         <div className="flex items-center justify-between gap-20">
 
+           <div className="text-lg text-black">
+             <i onClick={toglePhoneMenu} className=" cursor-pointer text-3xl las la-bars"></i>
+             </div>
+
+           <div className="text-lg text-black">
+                 <span className="text-black font-bold text-2xl">
+                    <Link href="/">
+                      TextFM
+                    </Link>
+                  </span>
+           </div>
+            <div className="text-lg text-black"><span className="text-black font-bold text-2xl">
+                    <FaSistrix/>
+                  </span></div>
+         </div>
+       </div>
        
     </>
     

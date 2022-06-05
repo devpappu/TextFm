@@ -104,8 +104,8 @@ const Header = () => {
               }
 
     </div>
-      <div className=" fixed top-0 z-50 w-full block ">
-        <div className="lg:px-48 bg-white text-black px-6 shadow-md border-b w-full block md:py-5 py-2 border-gray-100 bg-top-bar relative ">
+      <div className="fixed top-0 w-full block z-50">
+        <div className="z-50 lg:px-48 bg-white text-black px-6 shadow-md border-b w-full block md:py-5 py-2.5 border-gray-100 bg-top-bar relative ">
 
           <div className="lg:block md:block hidden ">
             <div className="flex justify-between items-center gap-5">
@@ -126,23 +126,6 @@ const Header = () => {
                     );
                   })}
                 </ul>
-              </div>
-            </div>
-
-
-            <div className="flex flex-wrap items-center gap-5">
-                <div>
-                    {
-                      user.email? <Link
-                      href="/dashboard"
-                      className={` ${style.sign__btn} text-white primary__bg__color py-2 rounded-full px-8`}
-                    >
-                      Dashboard
-                    </Link> :  <div className="flex gap-8">
-                    {/* <div onClick={() => dispatch(SET_SUBSCRIBE_FORM())} className=" cursor-pointer text-3xl "><FaSistrix/></div> */}
-                    <div onClick={changeMode} className=" cursor-pointer text-3xl "><MdOutlineDarkMode/></div>
-                    </div>
-                    }
               </div>
             </div>
             </div>
@@ -180,74 +163,155 @@ const Header = () => {
             </div>
           </div>
 
+           {/* phone left side menu */}
 
+        {phoneMenu && 
+            <div className={`t-popup__background phone__header ${phoneMenu ? '': ''}`}>
 
-          {/* phone left side menu */}
+              <div className={`mt-1  bg-white pb-4  fixed top-14 left-0  w-72 `}>
+              
+                <div className={`${style.phome__menu__div}`}>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
 
-          {phoneMenu && 
-            
-              <div className={`popup__background phone__header ${phoneMenu ? '': ''}`}>
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
 
-                <div className={`h-screen bg-white pb-4  absolute top-0 left-0  w-4/6 `}>
-                
-                  <div className=''>
-                  
-                    <div className="bg-blue w-full py-2 px-6 flex justify-between items-center ">
-                      <p className="text-black text-lg">Main Menu</p>
-
-                      <button onClick={toglePhoneMenu} className="bg-white px-4 rounded-lg text-red-500 text-4xl">x</button>
-
-                    </div>
-
-                      <ul className={`${style.menu__item} mt-4   text-black`}>
-                        {primaryMenu.map((item, index) => {
-                          return (
-                            <Link key={index} href={item.menu_link}>
-                              <a className={`block border-b border-gray-200 px-6 py-3 `}>{item.menu_title}</a>
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
                             </Link>
-                          );
-                        })}
-                      </ul>
 
-                      <div className="px-6 mt-2 ">
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
 
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
 
-                        {/* <p>Logout</p> */}
-              {
-                user.email? <Link
-                href="/dashboard"
-                className={` ${style.sign__btn} primary__bg__color py-2 rounded-full px-8 text-black `}
-              >
-                Dashboard a
-              </Link> :  <>
-              <Link
-                href="/login"
-                className={` ${style.sign__btn} text-black primary__bg__color py-2 rounded-full px-8`}
-                style={{textTransform: 'uppercase'}}
-              >
-                <a className={`${style.phone_menu_item}`}> Login</a>
-              </Link>
-              <Link
-                href="/signup"
-                className={` ${style.sign__btn} text-black primary__bg__color py-2 rounded-full px-8`}
-              >
-                <a className={`${style.phone_menu_item}`}>Sign Up</a>
-              </Link>
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
 
-              </>
-              }
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
 
-                      </div>
-                      
-                    </div>
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
 
-                </div>
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
+
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
+
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
+
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
+
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
+
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
+
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
+
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
+
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
+
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
+
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                      {primaryMenu.map((item, index) => {
+                        return (
+                          <div  key={index} className="px-6 flex gap-3 py-3">
+
+                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
+                                                        
+                            </span>
+
+                            <Link href={item.menu_link}>
+                              <a className={`${style.phone__menu__item}`}>
+                                {item.menu_title}</a>
+                            </Link>
+
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    
+                  </div>
 
               </div>
-          }
+
+            </div>
+        }
+
+        
 
         </div>
       </div>
+
+
+       
     </>
     
   );

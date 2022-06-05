@@ -76,4 +76,29 @@
       display: block !important;
   }
   
+  .phone__menu__item{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
   
+
+  .phome__menu__div{
+    overflow-y: scroll;
+    height: 100vh;
+
+    
+  }
+
+  .phome__menu__div::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  .phome__menu__div::-webkit-scrollbar-track {
+    background: #c7c3c3;
+  }
+
+  .phome__menu__div::-webkit-scrollbar-thumb {
+    background: #ebe8e8;
+  }

@@ -28,7 +28,7 @@ const Homepage = () => {
             />
           </div>
           
-          <div className="hero__text__image">
+          <div className="lg:mt-0 md:mt0 mt-16 hero__text__image">
             <div>
 
             <div className="flex flex-wrap lg:gap-6 md:gap-6 gap-5">

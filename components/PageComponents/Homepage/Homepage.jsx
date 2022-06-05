@@ -13,7 +13,7 @@ const Homepage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mt-10 lg:py-24 ">
+      <div className="mt-10 lg:py-24 py-8">
         {/* hero section */}
 
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 py-8 items-center section__padding">

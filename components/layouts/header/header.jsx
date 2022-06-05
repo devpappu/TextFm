@@ -280,7 +280,7 @@ const Header = () => {
       </div>
 
          {/* phone header */}
-       <div className="border-t border-gray-400 lg:hidden md:hidden block z-50 bg-white shadow-lg w-full py-3 fixed top-0 px-7">
+       <div className="border-t border-gray-400 lg:hidden md:hidden block z-50 bg-white shadow-lg w-full py-3 fixed top-0 px-4">
          <div className="flex items-center justify-between gap-20">
 
            <div className="text-lg text-black">

@@ -91,7 +91,7 @@
     
   }
 
-  .phome__menu__div::-webkit-scrollbar {
+  /* .phome__menu__div::-webkit-scrollbar {
     width: 11px;
   }
 
@@ -101,4 +101,4 @@
 
   .phome__menu__div::-webkit-scrollbar-thumb {
     background: #ebe8e8;
-  }
+  } */

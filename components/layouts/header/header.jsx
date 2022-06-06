@@ -192,9 +192,18 @@ const Header = () => {
                     <ul className={`${style.menu__item} mt-4   text-black`}>
                       {primaryMenu.map((item, index) => {
                         return (
-                          <div  key={index} className="px-6 flex gap-4 py-3">
+                          <div  key={index} className="phone_menu_icon px-6 flex gap-4 py-3">
 
-                          <i className="phone_menu_icon las la-globe-africa"></i>
+                              {item.menu_title == 'World' &&  <i className="las la-globe-africa"></i>}
+
+                              {item.menu_title == 'Science' && <i className="las la-flask"></i>}
+
+                              {item.menu_title == 'Business' && <i className="las la-city"></i>}
+
+                              {item.menu_title == 'Entertainment' && <i className="las la-city"></i>}
+                              {item.menu_title == 'Technology' && <i className="las la-microchip"></i>}
+
+                              {item.menu_title == 'Your local news' && <i className="las la-map-marker"></i>}
 
                             <Link href={item.menu_link}>
                               <a className={`${style.phone__menu__item}`}>
@@ -208,9 +217,12 @@ const Header = () => {
                     <ul className={`${style.menu__item} mt-4   text-black`}>
                       {primaryMenu.map((item, index) => {
                         return (
-                          <div  key={index} className="px-6 flex gap-4 py-3">
+                          <div  key={index} className="phone_menu_icon px-6 flex gap-4 py-3">
 
-                              <i className="phone_menu_icon las la-globe-africa"></i>
+                              {item.menu_title == 'Business' ? <i className="las la-city"></i> : 
+
+                                  <i className="phone_menu_icon las la-globe-africa"></i>
+                              }
 
                             <Link href={item.menu_link}>
                               <a className={`${style.phone__menu__item}`}>

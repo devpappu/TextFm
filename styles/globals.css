@@ -195,3 +195,8 @@ a {
 .hero_section{
   /* background: -webkit-gradient(linear,left top,right top,from(rgba(255,161,161,.1)),to(rgba(24,31,216,.1))); */
 }
+
+.phone_menu_icon{
+  color: #3c4043;
+  font-size: 24px;
+}

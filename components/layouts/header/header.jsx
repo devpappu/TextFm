@@ -219,28 +219,16 @@ const Header = () => {
                         return (
                           <div  key={index} className="phone_menu_icon px-6 flex gap-4 py-3">
 
-                              {item.menu_title == 'Business' ? <i className="las la-city"></i> : 
+                              {item.menu_title == 'World' &&  <i className="las la-globe-africa"></i>}
 
-                                  <i className="phone_menu_icon las la-globe-africa"></i>
-                              }
+                              {item.menu_title == 'Science' && <i className="las la-flask"></i>}
 
-                            <Link href={item.menu_link}>
-                              <a className={`${style.phone__menu__item}`}>
-                                {item.menu_title}</a>
-                            </Link>
+                              {item.menu_title == 'Business' && <i className="las la-city"></i>}
 
-                          </div>
-                        );
-                      })}
-                    </ul>
-                    <ul className={`${style.menu__item} mt-4   text-black`}>
-                      {primaryMenu.map((item, index) => {
-                        return (
-                          <div  key={index} className="px-6 flex gap-4 py-3">
+                              {item.menu_title == 'Entertainment' && <i className="las la-city"></i>}
+                              {item.menu_title == 'Technology' && <i className="las la-microchip"></i>}
 
-                            <span className="flex gap-3"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" className="hGhvff NMm5M"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"></path></svg>
-                                                        
-                            </span>
+                              {item.menu_title == 'Your local news' && <i className="las la-map-marker"></i>}
 
                             <Link href={item.menu_link}>
                               <a className={`${style.phone__menu__item}`}>
@@ -251,7 +239,6 @@ const Header = () => {
                         );
                       })}
                     </ul>
-                    
                   </div>
 
               </div>

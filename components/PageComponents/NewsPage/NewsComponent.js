@@ -22,20 +22,21 @@ const NewsComponent = ({news}) => {
 
                           <div className='lg:w-8/12 md:w-7/12'>
                           
-                           <div className='flex gap-5 justfy-between items-center '>
                               <p className="mt-3 lg:text-2xl text-lg">{item.post_title}</p>
-
-                              <button onClick={handleVoice} className='text-6xl text-gray-500 '><i className="las la-play-circle"></i></button>
-                            </div>
-
-                            <div>
-                           
+                          
 
                               <p className='mt-3' >{item.des}</p>
 
-                              <p className='mt-4 text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
+                              <div className='mt-5 flex gap-5 justfy-between items-center '>
+                                 <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
 
-                                <button className='mt-3 text-left text-black py-3'>Read more at 
+                                  <button onClick={handleVoice} className='text-3xl text-gray-500 '><i className="las la-play-circle"></i></button>
+                                  <span className='text-gray-500 text-sm -ml-4'>Voice</span>
+                              </div>
+
+                            <div>
+
+                                <button className='mt-2 text-left text-black py-3'>Read more at 
                                   <span className='ml-2  font-medium border-b border-black pb-1 '>
                                     Time Now
                                   </span>

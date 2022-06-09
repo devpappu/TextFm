@@ -17,10 +17,10 @@ const NewsComponent = ({news}) => {
 
                           <div className='lg:w-8/12 md:w-7/12'>
                           
-                           <div className='flex justfy-between items-center '>
+                           <div className='flex gap-5 justfy-between items-center '>
                               <p className="mt-3 lg:text-2xl text-lg">{item.post_title}</p>
 
-                              <button className='text-6xl text-gray-600 '><i className="las la-play-circle"></i></button>
+                              <button className='text-6xl text-gray-500 '><i className="las la-play-circle"></i></button>
                             </div>
 
                             <div>

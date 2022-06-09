@@ -27,11 +27,11 @@ const NewsComponent = ({news}) => {
 
                               <p className='mt-3' >{item.des}</p>
 
-                              <div className='mt-5 flex gap-5 justfy-between items-center '>
-                                 <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
+                              <div className='mt-5 flex gap-2 justfy-between items-center '>
 
-                                  <button onClick={handleVoice} className='text-3xl text-gray-500 '><i className="las la-play-circle"></i></button>
-                                  <span className='text-gray-500 text-sm -ml-4'>Voice</span>
+                                 <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
+                                  <button onClick={handleVoice} className='text-4xl text-gray-500 '><i className="las la-play-circle"></i></button>
+                                  <span className='text-gray-500 text-sm -ml-1'>Voice</span>
                               </div>
 
                             <div>

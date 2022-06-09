@@ -2,6 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import style from './blog.module.css'
 const NewsComponent = ({news}) => {
+
+   const handleVoice = () =>{
+            alert('Pending voice function')
+   }
+
     return (
         <>
           {
@@ -11,7 +16,7 @@ const NewsComponent = ({news}) => {
                     <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
 
                           <div className='lg:w-4/12 md:w-5/12 w-full'>
-                              <Image  width="500px" height="280px" src="/images/gig4.jpg" 
+                              <Image  width="500px" height="280px" src="/images/gig3.jpg" 
                                   className={`${style.blog__image} blog__image rounded-lg`}  alt={item.post_title}  />
                           </div>
 
@@ -20,7 +25,7 @@ const NewsComponent = ({news}) => {
                            <div className='flex gap-5 justfy-between items-center '>
                               <p className="mt-3 lg:text-2xl text-lg">{item.post_title}</p>
 
-                              <button className='text-6xl text-gray-500 '><i className="las la-play-circle"></i></button>
+                              <button onClick={handleVoice} className='text-6xl text-gray-500 '><i className="las la-play-circle"></i></button>
                             </div>
 
                             <div>

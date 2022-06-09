@@ -16,7 +16,7 @@ const Footer = () => {
                               <h3 className='text-white'>Quick Links</h3>
                               <ul className="footer__menu_li">
                                   <li>How to Hire</li>
-                                  <li> Talent Marketplace</li>
+                                  <li> Text-FM</li>
                               </ul>
                           </div>
                           <div>

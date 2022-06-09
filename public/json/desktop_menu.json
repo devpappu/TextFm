@@ -1,0 +1,28 @@
+[
+    {
+      "menu_title": "World",
+      "menu_link": "/blog",
+      "menu_position": 1
+    },
+    {
+      "menu_title": "Entertainment",
+      "menu_link": "/blog",
+      "menu_position": 2
+    },
+    {
+      "menu_title": "Science",
+      "menu_link": "/blog",
+      "menu_position": 3
+    },
+    {
+      "menu_title": "Business",
+      "menu_link": "/blog",
+      "menu_position": 4
+    },
+    {
+      "menu_title": "Technology",
+      "menu_link": "/blog",
+      "menu_position": 4
+    }
+  ]
+  

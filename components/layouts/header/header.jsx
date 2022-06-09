@@ -12,6 +12,7 @@ import { FaSistrix } from "react-icons/fa";
 const Header = () => {
 
   const [primaryMenu, setPrimaryMenu] = useState([]);
+  const [desktopMenu, setDesktopMenu] = useState([]);
   const [phoneMenu, setPhoneMenu] = useState(false);
   var id = ''
 
@@ -64,6 +65,19 @@ const Header = () => {
         .then(() => {
           console.log("final done");
         });
+
+      axios
+        .get(localUrl() + "/json/desktop_menu.json")
+        .then((response) => {
+          const menuList = response.data;
+          menuList.sort(sortingData("menu_position"));
+          console.log("menuList", menuList);
+          setDesktopMenu(menuList);
+        })
+        .catch((err) => console.error(err))
+        .then(() => {
+          console.log("final done");
+        });
     };
 
     getMenuList();
@@ -109,7 +123,8 @@ const Header = () => {
 
           <div className="lg:block md:block hidden ">
             <div className="flex justify-between items-center gap-5">
-            <div className="flex gap-16 items-center w-4/12 ">
+            
+            <div className="flex justify-between gap-16 items-center w-4/12 ">
               <div className="text-3xl text-black ">
                 <Link href="/">
                   TextFm
@@ -117,8 +132,8 @@ const Header = () => {
               </div>
           
               <div className={style.menu_ul__li}>
-                <ul className={`${style.menu__item} flex -ml-4  gap-10`}>
-                  {primaryMenu.map((item, index) => {
+                <ul className={`${style.menu__item} flex -ml-4  gap-16`}>
+                  {desktopMenu.map((item, index) => {
                     return (
                       <Link key={index} href={item.menu_link}>
                         <a className={style.menu__item}>{item.menu_title}</a>

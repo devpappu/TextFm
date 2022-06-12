@@ -19,10 +19,11 @@ const NewsComponent = ({news}) => {
   const [voice, setVoice] = useState('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
   const [audio] = useState(new Audio(voice));
   const [playing, setPlaying] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState({});
 
     
-    const handleVoice = () =>{
-
+    const handleVoice = (voice) =>{
+      setCurrentVoice(voice);
       //  setAudio(new Audio(voice));
       let d = audio.duration
        setDuration(d);
@@ -64,21 +65,26 @@ const NewsComponent = ({news}) => {
                           
                               <p className="mt-3 lg:text-2xl text-lg">{item.post_title}</p>
                           
-
                               <p className='mt-3' >{item.des}</p>
 
                               <div className='mt-5 flex gap-2 justfy-between items-center '>
 
                                  <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
                                  
-                                  <button onClick={handleVoice} className='text-4xl text-gray-500 '>
-                                     {playing ? (<i className="las la-stop-circle"></i>) :
-                                          (<i className="las la-play-circle"></i>
+                                  <button onClick={() => handleVoice(item)} className='text-4xl text-gray-500 '>
+                                    
+                                     {playing ? (
+                                             <>
+                                                {currentVoice.id == item.id ? <i className="las la-stop-circle"></i>
+                                                : <i className="las la-play-circle"></i>}
+                                             </>
+                                       ):(
+                                        <i className="las la-play-circle"></i>
                                       )}
                                     </button>
 
                                   <span className='text-gray-500 text-sm -ml-1'>Voice</span>
-                                  <span></span>
+
                               </div>
 
                             <div>

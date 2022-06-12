@@ -52,7 +52,7 @@ const Index = () => {
 
         setLoading(true);
 
-        axios.post(apiurl() +'contact-mail-send',form)
+        axios.post(apiurl() +'send-contact-mail',form)
        .then(response => {
 
         if (response.status >= 200 && response.status < 300) {

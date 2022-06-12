@@ -1,16 +1,56 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import Image from 'next/image';
-import style from './blog.module.css'
+import style from './blog.module.css';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+
+
 const NewsComponent = ({news}) => {
 
-   const handleVoice = () =>{
-            alert('Pending voice function')
-   }
+  const audioPlayer = useRef();
+
+  // const [audio] = useState('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+  // const [audio] = useState(new Audio(url));
+
+  const [currentTime, setCurrentTime] = useState(0);
+  const [seekValue, setSeekValue] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const [voice, setVoice] = useState('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+  const [audio] = useState(new Audio(voice));
+  const [playing, setPlaying] = useState(false);
+
+    
+    const handleVoice = () =>{
+
+      //  setAudio(new Audio(voice));
+      let d = audio.duration
+       setDuration(d);
+
+       setPlaying(!playing);
+    }
+
+    const onPlaying = () => {
+      setCurrentTime(audioPlayer.current.currentTime);
+      setSeekValue(
+        (audioPlayer.current.currentTime / audioPlayer.current.duration) * 100
+      );
+    };
+
+    useEffect(() => {
+      playing ? audio.play() : audio.pause();
+      // let d = audio.duration
+      // setDuration(d);
+    },
+    [playing]
+  );
 
     return (
         <>
-          {
-            news.map((item, index) =>{
+
+          d: {duration}
+
+          {news.map((item, index) =>{
                 return(
                 <div key={index} className="mb-6 bg-white rounded-lg shadow-lg px-5 pt-4 pb-2 box__shadow border border-gray-200  ">
                     <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
@@ -30,8 +70,15 @@ const NewsComponent = ({news}) => {
                               <div className='mt-5 flex gap-2 justfy-between items-center '>
 
                                  <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
-                                  <button onClick={handleVoice} className='text-4xl text-gray-500 '><i className="las la-play-circle"></i></button>
+                                 
+                                  <button onClick={handleVoice} className='text-4xl text-gray-500 '>
+                                     {playing ? (<i className="las la-stop-circle"></i>) :
+                                          (<i className="las la-play-circle"></i>
+                                      )}
+                                    </button>
+
                                   <span className='text-gray-500 text-sm -ml-1'>Voice</span>
+                                  <span></span>
                               </div>
 
                             <div>
@@ -41,7 +88,6 @@ const NewsComponent = ({news}) => {
                                     Time Now
                                   </span>
                                 </button>
-
                             </div>
 
                           </div>

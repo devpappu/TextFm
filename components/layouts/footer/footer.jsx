@@ -6,14 +6,14 @@ const Footer = () => {
             <div className="bg-blue">
                 <div className="section__padding">
                     <div className="py-12">
-                      <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 text-white'>
+                      <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-7 text-white'>
                           <div>
                               <h3 className='text-white'>About TextFm</h3>
                               <p className="text-sm footer__menu_li">
                               Work with the largest network of independent professionals and get things done—from quick turnarounds to big transformations.
                               </p>
                           </div>
-                          <div className='lg:ml-20'>
+                          <div className='lg:ml-20  lg:block md:block hidden '>
                               <h3 className='text-white'>Quick Links</h3>
                               <ul className="footer__menu_li">
                                   <li><Link href="/news" ><a>Go - News Page</a></Link></li>

@@ -1,0 +1,22 @@
+.contact__section{
+    background: #F2F2F2;
+}
+
+.contact{
+    padding: 40px 0px;
+}
+.contact__div{
+    background: white;
+    margin: 80px 0px;
+}
+
+@media only screen and (max-width: 768px){
+  
+  
+    .contact__div{
+        background: white;
+        margin: 40px 0px;
+    }
+    
+    }
+  

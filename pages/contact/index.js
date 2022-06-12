@@ -10,7 +10,7 @@ const Index = () => {
 
     useEffect(() =>{
 
-        axios.get(localUrl()+ '/json/privacy_policy.json').then(res =>{
+        axios.get(localUrl()+ '/json/terms_of_use.json').then(res =>{
            
             setdata(res.data);
             
@@ -21,9 +21,8 @@ const Index = () => {
 
     return (
         <div>
-
-             <Head>
-                <title>Privacy Policy</title>
+            <Head>
+                <title>Contact Us</title>
             </Head>
             <Header/>
                 <div className='page-py section-px' style={{'line-height': '35px'}} >

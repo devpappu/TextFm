@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 const Footer = () => {
     return (
         <div>
@@ -15,8 +16,8 @@ const Footer = () => {
                           <div className='lg:ml-20'>
                               <h3 className='text-white'>Quick Links</h3>
                               <ul className="footer__menu_li">
-                                  <li>How to Hire</li>
-                                  <li> Text-FM</li>
+                                  <li><Link href="/news" ><a>Go - News Page</a></Link></li>
+                                  <li><Link href="/posts" ><a>Go - Posts Page </a></Link></li>
                               </ul>
                           </div>
                           <div>
@@ -45,12 +46,12 @@ const Footer = () => {
 
                         <div className='mt-5 flex flex-wrap lg:flex-nowrap  gap-8'>
                         
-                          <p className='footer__text border-r border-white pr-4 '>© 2021 - 2022 TextFM Global Inc.</p>
+                          <p className='footer__text border-r border-white pr-4 '>© 2021 - 2022 TextFM All Rights Reserved.</p>
                           
                            <ul className='flex flex-wrap lg:flex-nowrap gap-8'>
-                            <li className='footer__text'>Terms of Service</li>
-                            <li className='footer__text'>Privacy Policy </li>
-                            <li className='footer__text'> CA Notice at Collection</li>
+                            <li className='footer__text'><Link href="/terms-of-use" ><a>Terms of Service </a></Link></li>
+                            <li className='footer__text'><Link href="/privacy-policy" ><a>Privacy Policy </a></Link></li>
+                            <li className='footer__text'><Link href="/contact" ><a>Contact Us</a></Link></li>
                            </ul>
                         </div>
                     </div>

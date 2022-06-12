@@ -45,14 +45,12 @@ const Footer = () => {
 
                         <div className='mt-5 flex flex-wrap lg:flex-nowrap  gap-8'>
                         
-                          <p className='footer__text border-r border-white pr-4 '>© 2015 - 2022 Upwork® Global Inc.</p>
+                          <p className='footer__text border-r border-white pr-4 '>© 2021 - 2022 TextFM Global Inc.</p>
                           
                            <ul className='flex flex-wrap lg:flex-nowrap gap-8'>
                             <li className='footer__text'>Terms of Service</li>
                             <li className='footer__text'>Privacy Policy </li>
                             <li className='footer__text'> CA Notice at Collection</li>
-                            <li className='footer__text'>Cookie Settings </li>
-                            <li className='footer__text'>Accessibility</li>
                            </ul>
                         </div>
                     </div>

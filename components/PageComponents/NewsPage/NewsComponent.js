@@ -71,8 +71,8 @@ const NewsComponent = ({news}) => {
 
                                  <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
                                  
-                                 <div className="flex gap-1 items-center hover:bg-gray-100  py-1 px-6 rounded ">
-                                    <button onClick={() => handleVoice(item)} className='text-4xl text-gray-500 '>
+                                 <div onClick={() => handleVoice(item)} className=" cursor-pointer flex gap-1 items-center hover:bg-gray-100  py-0.5 px-4 rounded ">
+                                    <button  className='text-4xl text-gray-500 '>
                                       
                                       {playing ? (
                                               <>

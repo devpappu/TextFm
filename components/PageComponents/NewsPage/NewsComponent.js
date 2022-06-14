@@ -71,19 +71,21 @@ const NewsComponent = ({news}) => {
 
                                  <p className='text-gray-700 text-sm'>12-07-2022 05:13 PM</p>
                                  
-                                  <button onClick={() => handleVoice(item)} className='text-4xl text-gray-500 '>
-                                    
-                                     {playing ? (
-                                             <>
-                                                {currentVoice.id == item.id ? <i className="las la-stop-circle"></i>
-                                                : <i className="las la-play-circle"></i>}
-                                             </>
-                                       ):(
-                                        <i className="las la-play-circle"></i>
-                                      )}
-                                    </button>
+                                 <div className="flex gap-1 items-center hover:bg-gray-100  py-1 px-6 rounded ">
+                                    <button onClick={() => handleVoice(item)} className='text-4xl text-gray-500 '>
+                                      
+                                      {playing ? (
+                                              <>
+                                                  {currentVoice.id == item.id ? <i className="las la-stop-circle"></i>
+                                                  : <i className="las la-play-circle"></i>}
+                                              </>
+                                        ):(
+                                          <i className="las la-play-circle"></i>
+                                        )}
+                                      </button>
 
-                                  <span className='text-gray-500 text-sm -ml-1'>Voice</span>
+                                    <span className='text-gray-500 text-sm '>Voice</span>
+                                 </div>
 
                               </div>
 

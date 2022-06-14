@@ -1,13 +1,28 @@
 [
   {
+    "menu_title": "Bangladesh",
+    "menu_link": "/blog",
+    "menu_position": 1
+  },
+  {
     "menu_title": "World",
     "menu_link": "/blog",
     "menu_position": 1
   },
   {
-    "menu_title": "Entertainment",
+    "menu_title": "Sports",
     "menu_link": "/blog",
     "menu_position": 2
+  },
+  {
+    "menu_title": "Technology",
+    "menu_link": "/blog",
+    "menu_position": 3
+  },
+  {
+    "menu_title": "Entertainment",
+    "menu_link": "/blog",
+    "menu_position": 3
   },
   {
     "menu_title": "Science",
@@ -20,12 +35,12 @@
     "menu_position": 4
   },
   {
-    "menu_title": "Your local news",
+    "menu_title": "Automobile",
     "menu_link": "/blog",
-    "menu_position": 5
+    "menu_position": 6
   },
   {
-    "menu_title": "Technology",
+    "menu_title": "Startup",
     "menu_link": "/blog",
     "menu_position": 6
   }

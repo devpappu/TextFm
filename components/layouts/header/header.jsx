@@ -125,7 +125,7 @@ const Header = () => {
             <div className="flex justify-between items-center gap-5">
             
             <div className="flex justify-between gap-16 items-center w-4/12 ">
-              <div className="text-3xl text-black ">
+              <div className="text-2xl text-black font-bold">
                 <Link href="/">
                   TextFm
                 </Link>
@@ -163,7 +163,7 @@ const Header = () => {
                       <i className="phone_menu_icon las la-globe-africa"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                           Top stories
+                           Tranding News
                           </a>
                       </Link>
                       </div>
@@ -172,26 +172,26 @@ const Header = () => {
                      <i className="lar la-hand-point-right"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                           For you
+                           All News
                           </a>
                       </Link>
                       </div>
 
-                     <div  className="phone_menu_icon items-center px-6 flex gap-4 py-3">
+                     {/* <div  className="phone_menu_icon items-center px-6 flex gap-4 py-3">
                      <i className="las la-search"></i>
                       <Link href='/news'>
-                        <a className={`${style.phone__menu__item}`}>
-                         Saved searches
+                         <a className={`${style.phone__menu__item}`}>
+                           Saved searches
                           </a>
                       </Link>
-                      </div>
+                      </div> */}
 
 
                      <div  className="px-6 flex items-center gap-4 py-3">
-                       <i className="phone_menu_icon las la-star-half-alt"></i>
+                       <i className="phone_menu_icon las la-bookmark"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                           Following
+                           Save News
                           </a>
                       </Link>
                       </div>
@@ -201,13 +201,15 @@ const Header = () => {
                    <div className="px-6">
                     <div className="py-5 my-4 phone_menu_icon border-y flex items-center gap-3">
                          <i className="las la-notes-medical"></i>
-                        <a className={`${style.phone__menu__item}`}>CAVID-19</a>
+                        <a className={`${style.phone__menu__item}`}>COVID-19</a>
                       </div>
                    </div>
-                    <ul className={`${style.menu__item} mt-4   text-black`}>
+                    <ul className={`${style.menu__item} mt-4 pb-8  text-black`}>
                       {primaryMenu.map((item, index) => {
                         return (
                           <div  key={index} className="phone_menu_icon px-6 flex gap-4 py-3">
+
+                              {item.menu_title == 'Bangladesh' &&  <i className="las la-flag-checkered"></i>}
 
                               {item.menu_title == 'World' &&  <i className="las la-globe-africa"></i>}
 
@@ -215,10 +217,13 @@ const Header = () => {
 
                               {item.menu_title == 'Business' && <i className="las la-city"></i>}
 
+                              {item.menu_title == 'Sports' && <i className="las la-city"></i>}
+
                               {item.menu_title == 'Entertainment' && <i className="las la-city"></i>}
                               {item.menu_title == 'Technology' && <i className="las la-microchip"></i>}
 
-                              {item.menu_title == 'Your local news' && <i className="las la-map-marker"></i>}
+                              {item.menu_title == 'Automobile' && <i className="las la-microchip"></i>}
+                              {item.menu_title == 'Startup' && <i className="las la-microchip"></i>}
 
                             <Link href={item.menu_link}>
                               <a className={`${style.phone__menu__item}`}>
@@ -229,31 +234,7 @@ const Header = () => {
                         );
                       })}
                     </ul>
-                    <ul className={`pb-10 ${style.menu__item} mt-4   text-black`}>
-                      {primaryMenu.map((item, index) => {
-                        return (
-                          <div  key={index} className="phone_menu_icon px-6 flex gap-4 py-3">
-
-                              {item.menu_title == 'World' &&  <i className="las la-globe-africa"></i>}
-
-                              {item.menu_title == 'Science' && <i className="las la-flask"></i>}
-
-                              {item.menu_title == 'Business' && <i className="las la-city"></i>}
-
-                              {item.menu_title == 'Entertainment' && <i className="las la-city"></i>}
-                              {item.menu_title == 'Technology' && <i className="las la-microchip"></i>}
-
-                              {item.menu_title == 'Your local news' && <i className="las la-map-marker"></i>}
-
-                            <Link href={item.menu_link}>
-                              <a className={`${style.phone__menu__item}`}>
-                                {item.menu_title}</a>
-                            </Link>
-
-                          </div>
-                        );
-                      })}
-                    </ul>
+                    
                   </div>
 
               </div>

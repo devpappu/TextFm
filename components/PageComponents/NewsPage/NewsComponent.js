@@ -49,7 +49,7 @@ const NewsComponent = ({news}) => {
     return (
         <>
 
-          d: {duration}
+          {/* d: {duration} */}
 
           {news.map((item, index) =>{
                 return(

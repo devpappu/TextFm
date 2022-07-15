@@ -41,7 +41,10 @@ const Post = () => {
               
               <p className='pt-10 text-lg'>Jan 27 2022</p>
 
-               <p className={`${style.blog__title} mt-12 text-4xl font-bold`}>43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
+               <p className={`${style.blog__title} mt-12 text-4xl font-bold`}>
+                
+                43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
+
                <p className={style.blog__description} dangerouslySetInnerHTML={{__html: Post}}/>
 
                <div className='mt-8'>
@@ -49,6 +52,7 @@ const Post = () => {
                  <p className='mt-1 text-lg font-semibold'>Team TextFm</p>
                </div>
             </div>
+
             <Footer/>
         </>
        

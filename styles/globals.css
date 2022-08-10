@@ -35,6 +35,12 @@ a {
 
 }
 
+.home_page{
+
+  background-image: url(/images/banner-bg.svg);
+  background-position: 0px -200px;
+
+}
 
 .section__padding {
   padding: 0px 10em;

@@ -13,7 +13,7 @@ const BlogComponent = ({blogs}) => {
                     return(
                     <div key={index} className="mb-6">
                         <div>
-                            <div className='bg-white border rounded p-4'>
+                            <div className='bg-white border rounded p-4 shadow-general'>
                               <Image className='rounded' width={'700px'} height={'500px'}
                               src={'/images/hrithik-roshan.jpg'}>
 

@@ -59,6 +59,9 @@ a {
   border-color: rgba(71,85,105,.1);
 }
 
+ .shadow-general{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+ }
 
 .section__padding {
   padding: 0px 10em;

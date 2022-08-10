@@ -13,13 +13,13 @@ const BlogComponent = ({blogs}) => {
                     return(
                     <div key={index} className="mb-6">
                         <div>
-                            <div className='bg-white border rounded p-3'>
+                            <div className='bg-white border rounded p-4'>
                               <Image className='rounded' width={'600px'} height={'500px'}
                               src={'/images/hrithik-roshan.jpg'}>
 
                               </Image>
 
-                               <div className='p-5'>
+                               <div className=''>
                                  <p className="my-3 text-black text-lg font-medium hover:text-red-600 ">{item.post_title}</p>
                                   <p className='mt-4 text-md'>{blogTitleTrim(item.des)}
                                     <Link

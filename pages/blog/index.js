@@ -46,9 +46,9 @@ export default function Index() {
             <div className="s-mt  ">
                 <div className='-m__gradient__bg'>
 
-                  <h1 className=' pt-8 pb-18 lg:px-48 md:px-12 px-6 text-5xl font-bold  py-10 '>Latest Blogs</h1>
+                  <h1 className='bg-[#ffc107] text-white pt-8 pb-18 lg:px-48 md:px-12 px-6 text-5xl font-bold  py-10 '>Latest Blogs</h1>
                 </div>
-                <div className='gradient-primary border gradient-primary pt-4 pb-16 lg:px-48 md:px-12 px-6 '>
+                <div className='mt-8 gradient-primary border gradient-primary pt-4 pb-16 lg:px-48 md:px-12 px-6 '>
                   <div className="blogs py-8 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-6">
                       <BlogComponent blogs={Post}/>
                   </div>

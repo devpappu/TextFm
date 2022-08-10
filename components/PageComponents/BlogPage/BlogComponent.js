@@ -14,7 +14,7 @@ const BlogComponent = ({blogs}) => {
                     <div key={index} className="mb-6">
                         <div>
                             <div className='bg-white border rounded p-4'>
-                              <Image className='rounded' width={'600px'} height={'500px'}
+                              <Image className='rounded' width={'700px'} height={'500px'}
                               src={'/images/hrithik-roshan.jpg'}>
 
                               </Image>

@@ -43,6 +43,23 @@ a {
 
 }
 
+.m__gradient__bg{
+
+  background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%);
+  /* background-image: url(/images/banner-bg.svg);
+  background-position: 0px -200px; */
+
+}
+
+.gradient-primary {
+  background: linear-gradient(180deg,#f8fafc,rgba(242,202,252,.11) 34.69%,rgba(250,198,252,.11) 44.06%,rgba(175,183,255,.11) 54.48%,rgba(142,220,200,.07) 64.9%,#f8fafc 97.95%);
+}
+
+.border-general {
+  border-color: rgba(71,85,105,.1);
+}
+
+
 .section__padding {
   padding: 0px 10em;
 }

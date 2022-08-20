@@ -53,8 +53,8 @@ const NewsComponent = ({news}) => {
 
           {news.map((item, index) =>{
                 return(
-                <div key={index} className="mb-6 bg-white rounded-lg shadow-lg px-5 pt-4 pb-2 box__shadow border border-gray-200  ">
-                    <div className='mt-2 lg:flex md:flex justify-center items-center gap-5'>
+                <div key={index} className="-mt-2 bg-white rounded-lg shadow-lg px-5 pt-4 pb-2 box__shadow border border-gray-200  ">
+                    <div className='lg:flex md:flex justify-center items-center gap-5'>
 
                           <div className='lg:w-4/12 md:w-5/12 w-full'>
                               <Image  width="500px" height="280px" src="/images/gig3.jpg" 

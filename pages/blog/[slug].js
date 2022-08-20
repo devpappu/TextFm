@@ -39,7 +39,7 @@ const Post = () => {
         <div className='py-24 lg:px-10 px-3 bg-gray-200 flex gap-5'>
 
 
-            <div className='bg-white shadow h-screen	 p-3 lg:block md:block hidden w-11/12'>
+            <div className='bg-white shadow h-screen rounded	 p-3 lg:block md:block hidden w-11/12'>
                 <Image className='rounded' width={'400px'} height={'300px'}
                         src={'/images/hrithik-roshan.jpg'}>
                 </Image>
@@ -53,15 +53,25 @@ const Post = () => {
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
               </div>
 
-                  
-                  <div className='border-y py-2'>
 
-                    <p className='text-lg'>Jan 27 2022</p>
+                 <div className='my-10 flex justify-center ' >
+
+                    <Image className='rounded object-contain' width={'1000px'} height={'400px'}
+                            src={'/images/hrithik-roshan.jpg'}>
+                    </Image>
+
+                 </div>
+
+                  
+                  <div className='border-y py-2.5 flex flex-wrap text-[10px] font-medium gap-4 items-center uppercase  '>
+                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#e91e63]'>Category : Media</p>
+                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#4caf50]'>3 Min Read Time</p>
+                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#f44336]'>Jan 27 2022</p>
                   </div>
 
 
 
-                  <p className={`${style.blog__title} mt-5 text-lg font-bold`}>
+                  <p className={`${style.blog__title} mt-8 text-lg font-bold`}>
                     
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
                  
@@ -73,7 +83,7 @@ const Post = () => {
                 </div>
              </div>
 
-             <div className='bg-white shadow-lg h-screen p-3 lg:block md:hidden hidden w-11/12'>
+             <div className='bg-white shadow-lg h-screen rounded p-3 lg:block md:hidden hidden w-11/12'>
                 <Image className='rounded' width={'400px'} height={'300px'}
                         src={'/images/hrithik-roshan.jpg'}>
                 </Image>

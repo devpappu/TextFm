@@ -72,7 +72,7 @@ const BlogComponent = ({blogs}) => {
               {
                 blogs.map((item, index) =>{
                     return(
-                    <div key={index} className="bg-white shadow border rounded px-5 py-3  flex gap-4">
+                    <div key={index} className="bg-white shadow border rounded px-4 py-3  flex gap-4">
                            
                             <div className=''>
 

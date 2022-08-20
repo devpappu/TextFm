@@ -47,7 +47,7 @@ const Post = () => {
 
               <div className='bg-white shadow-md rounded lg:px-8 md:px-6 px-4  py-5 w-12/12 ' >
               {/* lg:block md:block hidden */}
-              <div class=" mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
+              <div className=" mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
               <p className={`${style.blog__title} text-white text-2xl font-bold`}>
                     
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>

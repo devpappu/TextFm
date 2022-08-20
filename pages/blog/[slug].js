@@ -38,16 +38,16 @@ const Post = () => {
 
         <div className='py-24 lg:px-10 px-3 bg-gray-200 flex gap-5'>
 
-
-            <div className='bg-white shadow h-screen rounded	 p-3 lg:block md:block hidden w-11/12'>
-                <Image className='rounded' width={'400px'} height={'300px'}
+            
+            <div className='bg-white shadow h-screen rounded sticky top-24	 p-3 lg:block md:block hidden w-11/12'>
+                <Image className='shadow-lg rounded' width={'400px'} height={'300px'}
                         src={'/images/hrithik-roshan.jpg'}>
                 </Image>
             </div>
 
               <div className='bg-white shadow-md rounded lg:px-8 md:px-6 px-4  py-5 w-12/12 ' >
-
-              <div class="mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
+              {/* lg:block md:block hidden */}
+              <div class=" mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
               <p className={`${style.blog__title} text-white text-2xl font-bold`}>
                     
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
@@ -56,8 +56,19 @@ const Post = () => {
 
                  <div className='my-10 flex justify-center ' >
 
-                    <Image className='rounded object-contain' width={'1000px'} height={'400px'}
-                            src={'/images/hrithik-roshan.jpg'}>
+
+                  {/* <div className='rounded shadow px-4' style={{width: '100%', height: '300px', position: 'relative' }}>
+                      <Image
+                        alt='hero banner'
+                        src={'/images/single.jpg'}
+                        layout='fill'
+                        className='rounded shadow px-4 '
+                        objectFit='contain'
+                      />
+                  </div> */}
+
+                    <Image className='rounded object-cover object-top' width={'750px'} height={'300px'}
+                            src={'/images/single.jpg'}>
                     </Image>
 
                  </div>
@@ -83,7 +94,7 @@ const Post = () => {
                 </div>
              </div>
 
-             <div className='bg-white shadow-lg h-screen rounded p-3 lg:block md:hidden hidden w-11/12'>
+             <div className='sticky top-24 bg-white shadow-lg h-screen rounded p-3 lg:block md:hidden hidden w-11/12'>
                 <Image className='rounded' width={'400px'} height={'300px'}
                         src={'/images/hrithik-roshan.jpg'}>
                 </Image>

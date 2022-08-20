@@ -61,6 +61,7 @@ const BlogComponent = ({blogs}) => {
            </div>
 
           <div className='bg-white shadow-lg h-screen p-3 lg:block md:hidden hidden'>
+
             <Image className='rounded' width={'400px'} height={'300px'}
                                   src={'/images/hrithik-roshan.jpg'}>
             </Image>

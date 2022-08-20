@@ -127,7 +127,7 @@ const Header = () => {
             <div className="flex justify-between gap-16 items-center w-4/12 ">
               <div className="text-2xl text-black font-bold">
                 <Link href="/">
-                  TextFm
+                  TextFM
                 </Link>
               </div>
           

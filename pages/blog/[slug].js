@@ -36,22 +36,50 @@ const Post = () => {
 
       <Header/>
 
+        <div className='py-24 lg:px-10 px-3 bg-gray-200 flex gap-5'>
 
-        <div className='my-16 blog__single__section__padding'>
-              
-              <p className='pt-10 text-lg'>Jan 27 2022</p>
 
-               <p className={`${style.blog__title} mt-12 text-4xl font-bold`}>
-                
-                43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
-
-               <p className={style.blog__description} dangerouslySetInnerHTML={{__html: Post}}/>
-
-               <div className='mt-8'>
-                 <p className='text-md font-medium'>Published by</p>
-                 <p className='mt-1 text-lg font-semibold'>Team TextFm</p>
-               </div>
+            <div className='bg-white shadow h-screen	 p-3 lg:block md:block hidden w-11/12'>
+                <Image className='rounded' width={'400px'} height={'300px'}
+                        src={'/images/hrithik-roshan.jpg'}>
+                </Image>
             </div>
+
+              <div className='bg-white shadow-md rounded lg:px-8 md:px-6 px-4  py-5 w-12/12 ' >
+
+              <div class="mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
+              <p className={`${style.blog__title} text-white text-2xl font-bold`}>
+                    
+                    43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
+              </div>
+
+                  
+                  <div className='border-y py-2'>
+
+                    <p className='text-lg'>Jan 27 2022</p>
+                  </div>
+
+
+
+                  <p className={`${style.blog__title} mt-5 text-lg font-bold`}>
+                    
+                    43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
+                 
+                  <p className={style.blog__description} dangerouslySetInnerHTML={{__html: Post}}/>
+
+                <div className='mt-8'>
+                  <p className='text-md font-medium'>Published by</p>
+                  <p className='mt-1 text-lg font-semibold'>Team TextFm</p>
+                </div>
+             </div>
+
+             <div className='bg-white shadow-lg h-screen p-3 lg:block md:hidden hidden w-11/12'>
+                <Image className='rounded' width={'400px'} height={'300px'}
+                        src={'/images/hrithik-roshan.jpg'}>
+                </Image>
+          </div>
+         </div>
+
 
             <Footer/>
         </>

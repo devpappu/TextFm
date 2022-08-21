@@ -47,8 +47,8 @@ const Post = () => {
 
               <div className='bg-white shadow-md rounded lg:px-8 md:px-6 px-4  py-5 w-12/12 ' >
               {/* lg:block md:block hidden */}
-              <div className=" mb-5  px-3 py-4 bg-gradient-to-r from-sky-500 rounded text-center to-indigo-500">
-              <p className={`${style.blog__title} text-white text-2xl font-bold`}>
+              <div className=" mb-5  px-3 py-4">
+              <p className={`${style.blog__title} text-2xl font-bold`}>
                     
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
               </div>
@@ -74,10 +74,10 @@ const Post = () => {
                  </div>
 
                   
-                  <div className='border-y py-2.5 flex flex-wrap text-[10px] font-medium gap-4 items-center uppercase  '>
-                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#e91e63]'>Category : Media</p>
-                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#4caf50]'>3 Min Read Time</p>
-                     <p className='text-sm rounded-full py-1 text-white px-4 inline-block bg-[#f44336]'>Jan 27 2022</p>
+                  <div className='border-y py-2.5 flex flex-wrap text-[10px] font-medium gap-4 text-black items-center uppercase  '>
+                     <p className='text-sm rounded-full py-1 px-4 inline-block border'>Category : Media</p>
+                     <p className='text-sm rounded-full py-1  px-4 inline-block border'>3 Min Read Time</p>
+                     <p className='text-sm rounded-full py-1 px-4 inline-block border'>Jan 27 2022</p>
                   </div>
 
 

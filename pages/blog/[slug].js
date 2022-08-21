@@ -47,14 +47,14 @@ const Post = () => {
 
               <div className='bg-white shadow-md rounded lg:px-8 md:px-6 px-4  py-5 w-12/12 ' >
               {/* lg:block md:block hidden */}
-              <div className=" mb-5  px-3 py-4">
+              <div className=" mb-4  px-3 py-4">
               <p className={`${style.blog__title} text-2xl font-bold`}>
                     
                     43% say they kept their New Year’s resolution last year: Public ki Awaaz poll</p>
               </div>
 
 
-                 <div className='my-10 flex justify-center ' >
+                 <div className='mb-5 flex justify-center ' >
 
 
                   {/* <div className='rounded shadow px-4' style={{width: '100%', height: '300px', position: 'relative' }}>
@@ -74,7 +74,7 @@ const Post = () => {
                  </div>
 
                   
-                  <div className='border-y py-2.5 flex flex-wrap text-[10px] font-medium gap-4 text-black items-center uppercase  '>
+                  <div className='border-y mt-2 py-2.5 flex flex-wrap text-[10px] font-medium gap-4 text-black items-center uppercase  '>
                      <p className='text-sm rounded-full py-1 px-4 inline-block border'>Category : Media</p>
                      <p className='text-sm rounded-full py-1  px-4 inline-block border'>3 Min Read Time</p>
                      <p className='text-sm rounded-full py-1 px-4 inline-block border'>Jan 27 2022</p>

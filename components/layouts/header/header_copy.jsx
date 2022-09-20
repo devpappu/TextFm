@@ -106,114 +106,104 @@ const Header = () => {
   return (
 
     <>
+    <div>
+
          {form && 
+              
               <div className="popup__background">
                 <div className='lg:w-5/12 md:w-5/12 w-full form__center'>
                   <SearchBox/>
                 </div>
               </div>
-            }
-     
-       {/* desktop header */}
+              }
+
+    </div>
       <div className="fixed top-0 w-full block z-50">
         <div className="border-t-2 lg:px-48 bg-white text-black px-6 shadow-lg w-full block md:py-5 py-2.5 border-gray-300 bg-top-bar relative ">
 
-          <div className="lg:block md:block hidden ">              
-
-              <div className="grid grid-cols-2 items-center">
-               
-                <div className="text-lg text-black">
-                  <i onClick={toglePhoneMenu} className=" cursor-pointer text-3xl las la-bars"></i>
-                </div>
-
-                <div className="text-4xl -ml-[95%] pr-20 items-center text-center  text-black font-bold">
-                  <Link href="/">
-                    TextFM
-                  </Link>
-                </div>
+          <div className="lg:block md:block hidden ">
+            <div className="flex justify-between items-center gap-5">
             
-                <div className={`${style.menu_ul__li} hidden `}>
-                  <ul className={`${style.menu__item} flex -ml-4  gap-16`}>
-                    {desktopMenu.map((item, index) => {
-                      return (
-                        <Link key={index} href={item.menu_link}>
-                          <a className={style.menu__item}>{item.menu_title}</a>
-                        </Link>
-                      );
-                    })}
-                  </ul>
-                </div>
+            <div className="flex justify-between gap-16 items-center w-4/12 ">
+              <div className="text-2xl text-black font-bold">
+                <Link href="/">
+                  TextFM
+                </Link>
               </div>
-          </div>
-        </div>
-      </div>
-
-         {/* phone top header */}
-       <div className="border-t border-gray-400 lg:hidden md:hidden block z-50 bg-white shadow-lg w-full py-3 fixed top-0 px-4">
-         <div className="flex items-center justify-between gap-20">
-
-           <div className="text-lg text-black">
-             <i onClick={toglePhoneMenu} className=" cursor-pointer text-3xl las la-bars"></i>
+          
+              <div className={style.menu_ul__li}>
+                <ul className={`${style.menu__item} flex -ml-4  gap-16`}>
+                  {desktopMenu.map((item, index) => {
+                    return (
+                      <Link key={index} href={item.menu_link}>
+                        <a className={style.menu__item}>{item.menu_title}</a>
+                      </Link>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
-
-           <div className="text-lg text-black">
-                 <span className="text-black font-bold text-2xl">
-                    <Link href="/">
-                      TextFM
-                    </Link>
-                  </span>
-           </div>
-            <div className="text-lg text-black"><span className="text-black font-bold text-2xl">
-                    <FaSistrix/>
-                  </span></div>
-         </div>
-       </div>
+            </div>
+          </div>
 
 
-       {/* phone left side menu */}
-       {phoneMenu && 
-            <div className={`lg:z-100 z-60 t-popup__background phone__header`}>
+         
 
-              <div className={`pb-10 border-t-2 border-gray-300 bg-white z-40 lg:shadow shadow-xl fixed top-14 left-0  w-72 `}>
+           {/* phone left side menu */}
+
+        {phoneMenu && 
+            <div className={`z-50 t-popup__background phone__header ${phoneMenu ? '': ''}`}>
+
+              <div className={`pb-10 border-t-2 border-gray-300 bg-white lg:shadow shadow-xl fixed top-14 left-0  w-72 `}>
               
-                <div className={`lg:pt-8 md:pt-8 pb-10 ${style.phome__menu__div}`}>
+                <div className={`pb-10 ${style.phome__menu__div}`}>
                     <ul className={`${style.menu__item} mt-4   text-black`}>
                     
-                    <div  className="px-6 flex gap-4 py-3">
+                     <div  className="px-6 flex gap-4 py-3">
                       <i className="phone_menu_icon las la-globe-africa"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                          Tranding News
+                           Tranding News
                           </a>
                       </Link>
                       </div>
 
-                    <div  className="phone_menu_icon px-6 flex items-center gap-4 py-3">
-                    <i className="lar la-hand-point-right"></i>
+                     <div  className="phone_menu_icon px-6 flex items-center gap-4 py-3">
+                     <i className="lar la-hand-point-right"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                          All News
+                           All News
                           </a>
                       </Link>
                       </div>
 
-                    <div  className="px-6 flex items-center gap-4 py-3">
-                      <i className="phone_menu_icon las la-bookmark"></i>
+                     {/* <div  className="phone_menu_icon items-center px-6 flex gap-4 py-3">
+                     <i className="las la-search"></i>
+                      <Link href='/news'>
+                         <a className={`${style.phone__menu__item}`}>
+                           Saved searches
+                          </a>
+                      </Link>
+                      </div> */}
+
+
+                     <div  className="px-6 flex items-center gap-4 py-3">
+                       <i className="phone_menu_icon las la-bookmark"></i>
                       <Link href='/news'>
                         <a className={`${style.phone__menu__item}`}>
-                          Save News
+                           Save News
                           </a>
                       </Link>
                       </div>
 
                     </ul>
 
-                  <div className="px-6">
+                   <div className="px-6">
                     <div className="py-5 my-4 phone_menu_icon border-y flex items-center gap-3">
-                        <i className="las la-notes-medical"></i>
+                         <i className="las la-notes-medical"></i>
                         <a className={`${style.phone__menu__item}`}>COVID-19</a>
                       </div>
-                  </div>
+                   </div>
                     <ul className={`${style.menu__item} mt-4 pb-8  text-black`}>
                       {primaryMenu.map((item, index) => {
                         return (
@@ -251,6 +241,30 @@ const Header = () => {
 
             </div>
         }
+
+          </div>
+      </div>
+
+         {/* phone header */}
+       <div className="border-t border-gray-400 lg:hidden md:hidden block z-50 bg-white shadow-lg w-full py-3 fixed top-0 px-4">
+         <div className="flex items-center justify-between gap-20">
+
+           <div className="text-lg text-black">
+             <i onClick={toglePhoneMenu} className=" cursor-pointer text-3xl las la-bars"></i>
+             </div>
+
+           <div className="text-lg text-black">
+                 <span className="text-black font-bold text-2xl">
+                    <Link href="/">
+                      TextFM
+                    </Link>
+                  </span>
+           </div>
+            <div className="text-lg text-black"><span className="text-black font-bold text-2xl">
+                    <FaSistrix/>
+                  </span></div>
+         </div>
+       </div>
        
     </>
     

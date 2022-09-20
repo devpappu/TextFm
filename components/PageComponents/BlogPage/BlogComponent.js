@@ -68,7 +68,7 @@ const BlogComponent = ({blogs}) => {
           </div>
 
           <div className='lg:hidden md:hidden block'>
-           <div className='grid grid-cols-1 gap-5'>
+           <div className='grid grid-cols-1 gap-2'>
               {
                 blogs.map((item, index) =>{
                     return(
@@ -92,7 +92,7 @@ const BlogComponent = ({blogs}) => {
                             
                          </div>
 
-                      <div className='w-[250px]' >
+                      <div className='w-[150px]' >
                            <Image className='rounded object-cover ' width={'300px'} height={'350px'}
                              src={'/images/hrithik-roshan.jpg'}>
                            </Image>

@@ -56,7 +56,6 @@ const Post = () => {
 
                  <div className='mb-5 flex justify-center ' >
 
-
                   {/* <div className='rounded shadow px-4' style={{width: '100%', height: '300px', position: 'relative' }}>
                       <Image
                         alt='hero banner'
